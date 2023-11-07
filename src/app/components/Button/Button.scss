@@ -29,7 +29,7 @@
     transform: scale(1.05);
 
     .chevron {
-      translate: 1rem;
+      right: -20px;
     }
   }
 }
@@ -47,4 +47,10 @@
   vertical-align: top;
   width: 0.45em;
   transform: rotate(45deg);
+}
+
+.chevron {
+  position: relative;
+  right: 0;
+  transition: right ease 0.5s;
 }
