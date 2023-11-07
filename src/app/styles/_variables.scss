@@ -1,0 +1,57 @@
+:root {
+  /* // Global Colors */
+  --primary-color: #0a2540;
+  --green-color: #00f4d4;
+  --purple-color: #9b5de5;
+  --yellow-color: #fee440;
+  --blue-color: #00bbf9;
+  $pink-color: #f15bb5;
+  --black-color: #000;
+  --white-color: #fff;
+  --grey-color: #c4c4c4;
+  --darkGrey-color: #838383;
+
+  /* // Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+  --font-stack: "Inter", sans-serif;
+  --paragraph-size: 1rem;
+  --paragraph-size-medium: 0.8rem;
+  --paragraph-size-small: 0.6rem;
+  --heading1-size: 4.5rem;
+  --heading2-size: 1.25rem;
+  --heading3-size: 3rem;
+  --light: 300;
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
+  --primary-title-lineheight: 75px;
+  --primary-title-margin: 60px 0px;
+  --title-letter-spacing: -3px;
+  --title-lineheight: 65px;
+  --subtitle-letter-spacing: -1px;
+  --subtitle-margin: 20px 0;
+  --paragraph-line-spacing-large: 26px;
+  --paragraph-line-spacing-medium: 22px;
+  --paragraph-line-spacing-small: 18px;
+
+  /* // Viewport */
+  --small: 320px;
+  --medium: 768px;
+  --large: 1080px;
+  --xlarge: 1200px;
+  --gutter-small: 20px;
+  --gutter-medium: 30px;
+  --gutter-large: 40px;
+  --gutter-xl: 50px;
+
+  /* // Layout Variables */
+  --section-paddingNormal: 140px 0px;
+  --section-paddingSmall: 50px 0px;
+  --section-justify-center: center;
+  --section-justify-start: flex-start;
+  --section-justify-end: flex-end;
+
+  /* // Component Variables */
+  --button-margin-large: 30px 0;
+}
