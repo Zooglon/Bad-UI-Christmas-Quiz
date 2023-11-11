@@ -11,18 +11,16 @@
   border-radius: 2.5rem;
   cursor: pointer;
   background-color: var(--pink-color);
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   margin: var(--button-margin-large);
 
-  .label {
-    // color: var(--white-color);
-    font-family: var(--font-stack);
-    font-weight: var(--bold);
-    padding-right: 2.5rem;
+  &__disabled {
+    @extend .button;
+    cursor: unset;
+    background-color: var(--grey-color);
   }
 
   &:hover {
@@ -31,6 +29,13 @@
     .chevron {
       right: -20px;
     }
+  }
+
+  .label {
+    // color: var(--white-color);
+    font-family: var(--font-stack);
+    font-weight: var(--bold);
+    padding-right: 2.5rem;
   }
 }
 

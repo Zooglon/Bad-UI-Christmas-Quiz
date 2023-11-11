@@ -13,7 +13,7 @@ export const Button = ({ children, ...props }: ButtonTypes) => (
   <button
     className={
       props.disabled
-        ? "buttonDisabled"
+        ? "button__disabled"
         : props.version
         ? `button${props.version}`
         : "button"
