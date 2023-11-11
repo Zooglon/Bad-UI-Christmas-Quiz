@@ -6,7 +6,7 @@ import "./styles/main.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Os Christmas Quiz",
+  title: "OS Christmas Quiz",
   description: "Bad UX Quiz",
 };
 
