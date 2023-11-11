@@ -1,0 +1,132 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  &__text {
+    padding: 1rem;
+  }
+  &__task {
+    padding: 1rem;
+  }
+}
+
+// Task One
+
+.main {
+  position: relative;
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+
+  &__first {
+    @extend .main;
+    animation: spin linear 10s infinite;
+  }
+  &__second {
+    @extend .main;
+    animation: spinBack linear 10s infinite;
+  }
+}
+
+.rotateForwards {
+  animation: spin linear 10s infinite;
+}
+
+.rotateBackwards {
+  animation: spinBack linear 10s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinBack {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.circleContainer {
+  position: absolute;
+  left: calc(50% - 22px);
+  top: calc(50% - 22px);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@for $i from 1 through 26 {
+  $val: calc(13.85deg * $i);
+  .circleContainer:nth-child(26n + #{$i}) {
+    transform: rotate($val) translateX(160px);
+    background-color: var(--pink-color);
+  }
+}
+
+.circleText {
+  position: absolute;
+  top: 15%;
+  right: 28%;
+  transform: rotate(85deg);
+}
+
+.input {
+  &__select {
+    height: auto;
+    width: 500px;
+    border: 2px solid var(--pink-color);
+    border-radius: 2.5rem;
+  }
+  &__keyboardRow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+  &__keyboard {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    cursor: pointer;
+  }
+}
+
+.timer {
+  &__container {
+    border-radius: 50%;
+    border: 10px solid darkgray;
+    height: 150px;
+    width: 150px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__ticker {
+    width: 2%;
+    height: 100%;
+    background-color: black;
+    clip-path: inset(0px 0px 50% 0px);
+  }
+}
