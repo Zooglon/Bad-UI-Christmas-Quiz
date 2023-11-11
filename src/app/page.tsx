@@ -26,21 +26,39 @@ export default function Home() {
 
   return (
     <div className="appContainer">
-      <div
+      <header
         style={{
           display: "flex",
           flexDirection: "row",
           gap: "2.5rem",
-          alignItems: "baseline",
-          width: "100%",
-          justifyContent: "space-between",
+          alignItems: "flex-start",
+          margin: "1rem",
         }}
       >
-        <a href="/">
-          <Logo />
-        </a>
-        <h1>Christmas Web Form Race</h1>
-      </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            flexGrow: 1,
+            width: "30%",
+          }}
+        >
+          <a href="/" style={{ width: "20%" }}>
+            <Logo />
+          </a>
+        </div>
+        <h1>Christmas Bad UX Race</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            flexGrow: 1,
+            width: "30%",
+          }}
+        >
+          <h3>Page: {welcomePage ? "Welcome" : currentField + 1}</h3>
+        </div>
+      </header>
       {welcomePage ? (
         <div
           style={{
@@ -58,13 +76,13 @@ export default function Home() {
         <FormFields field={currentField} setCanContinue={setCanContinue} />
       )}
       {!welcomePage && (
-        <div
+        <footer
           style={{ width: "100%", display: "flex", justifyContent: "center" }}
         >
           <Button onClick={() => handleContinue()} disabled={!canContinue}>
             Continue
           </Button>
-        </div>
+        </footer>
       )}
     </div>
   );
