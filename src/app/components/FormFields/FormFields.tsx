@@ -27,7 +27,10 @@ export const FormFields = ({
 
   const Field = ({ input }: FieldInput) => {
     return (
-      <div className="formContainer">
+      <div
+        className="formContainer"
+        style={{ cursor: input.id === "FIELD-001" ? "none" : "auto" }}
+      >
         <FormFieldsData field={field} />
         <Button onClick={() => handleClick(input.id)}>Submit</Button>
       </div>
